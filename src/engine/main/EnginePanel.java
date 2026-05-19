@@ -1,7 +1,8 @@
 package engine.main;
 
-import engine.InputHandler;
+import engine.inputs.KeyboardInputs;
 import engine.components.Settings;
+import engine.inputs.MouseInputs;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +19,10 @@ public class EnginePanel extends JPanel {
         this.setBackground(Color.BLACK);
         this.setFocusable(true);
 
-        addKeyListener(new InputHandler());
+        MouseInputs mouseInputs = new MouseInputs();
+        addKeyListener(new KeyboardInputs());
+        addMouseListener(mouseInputs);
+        addMouseMotionListener(mouseInputs);
 
         this.loop = new Loop(this, settings);
         this.loop.start();
