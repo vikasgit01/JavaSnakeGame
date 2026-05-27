@@ -9,7 +9,7 @@ public class App {
         int screenWidth = 512;
         int screenHeight = 512;
         int fps = 60;
-        int tileSize = 32;
+        int tileSize = 16;
 
         EngineContext context = new EngineContext("game", tileSize, screenWidth, screenHeight, fps);
         Engine engine = new Engine(context);
