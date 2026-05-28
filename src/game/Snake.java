@@ -70,7 +70,6 @@ public class Snake extends Entity {
         g.setColor(Color.GREEN);
         g.fillRect((int) t.getPosition().getX(), (int) t.getPosition().getY(), size, size);
 
-        g.setColor(Color.WHITE);
         for (int i = 0; i < BODY_PARTS; i++) {
             g.fillRect((int) partsPosition[i].getX(), (int) partsPosition[i].getY(), size, size);
         }
